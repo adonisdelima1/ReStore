@@ -8,17 +8,16 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly StoreContext context;
-        public ProductsController(StoreContext context)
+        private readonly StoreContext _context;
+        public ProductsController(StoreContext _context)
         {
-            this.context = context;
             
         }
 
         [HttpGet]
         public ActionResult<List<Product>> GetProducts()
         {
-            var products = context.Products.ToList(); 
+            var products = _context.Products.ToList(); 
 
             return Ok(products);
         }
@@ -26,7 +25,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public ActionResult<Product> GetProduct(int id) 
         {
-            return context.Products.Find(id);
+            return _context.Products.Find(id);
         }
     }
 }
