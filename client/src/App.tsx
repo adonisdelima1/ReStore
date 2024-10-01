@@ -1,11 +1,7 @@
-import { useState } from 'react'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
-      <h1>Re-Store</h1>
+      <h1 style={{color: 'red'}}>Re-Store</h1>
     </div>
   )
 }
