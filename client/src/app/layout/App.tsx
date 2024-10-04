@@ -30,7 +30,7 @@ function App() {
   return (
     <div>
       <h1>Re-Store</h1>
-      <Catalog /> 
+      <Catalog products={products} addProduct={addProduct} /> 
     </div>
   )
 }
