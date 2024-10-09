@@ -15,7 +15,7 @@ function App() {
   }) 
 
   function handleChange() {
-    setDarkMode(prevValue => !prevValue)
+    setDarkMode(!darkMode)
   }
 
   return (
