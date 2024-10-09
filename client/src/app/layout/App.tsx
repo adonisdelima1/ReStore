@@ -1,18 +1,23 @@
 import Catalog from "../../features/catalog/Catalog"
-import { Container, CssBaseline } from "@mui/material"
+import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material"
 import Header from "./Header"
 
 
-function App() {
+function App() { 
+  const theme = createTheme({
+    palette: {
+      mode: 'dark'
+    }
+  })
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
     <CssBaseline />
       <Header />
       <Container>
         <Catalog /> 
       </Container>
-    </>
+    </ThemeProvider>
   )
 }
 
