@@ -1,4 +1,4 @@
-import { AppBar, IconButton, Switch, Toolbar, Typography } from "@mui/material";
+import { AppBar, Switch, Toolbar, Typography } from "@mui/material";
 
 interface Props {
     checked?: boolean 
